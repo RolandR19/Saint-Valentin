@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page protégée par mot de passe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('file:///C:/Users/rolan/Desktop/Arcades/Nouveau%20dossier%20(2)/jtm.jpg'); /* Remplacez l'URL par l'emplacement de votre image de roses */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function verifierMotDePasse() {
+            var motDePasse = document.getElementById("28082023").value;
+
+            // Vérifier si le mot de passe est correct
+            if (motDePasse === "28082023") {
+                window.location.href = "index.html"; // Rediriger vers la page protégée
+            } else {
+                alert("Mot de passe incorrect. Veuillez réessayer.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Page protégée par mot de passe</h2>
+        <p>Veuillez entrer le mot de passe pour accéder au contenu :</p>
+        <input type="password" id="28082023" placeholder="Mot de passe">
+        <button onclick="verifierMotDePasse()">Accéder</button>
+    </div>
+</body>
+</html>
